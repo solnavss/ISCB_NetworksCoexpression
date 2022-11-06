@@ -135,11 +135,13 @@ dev.off()
 
 We are going to work in teams of 4 with a subsaet of intronless genes.
 
-![alt text](https://github.com/solnavss/ISCB_NetworksCoexpression/blob/main/images/igraph_R.png)
+![alt text](https://github.com/solnavss/ISCB_NetworksCoexpression/blob/main/images/intronless.png)
 
 You can find the published paper here: [Evolutionary Perspective and Expression Analysis of Intronless Genes Highlight the Conservation of Their Regulatory Role](https://pubmed.ncbi.nlm.nih.gov/34306008/).
 
-![alt text](https://github.com/solnavss/ISCB_NetworksCoexpression/blob/main/images/igraph_R.png)
-
 Lets look at [igraph funtions/tools](https://igraph.org/r/html/latest/).
+
+![alt text](https://github.com/solnavss/ISCB_NetworksCoexpression/blob/main/images/poster.jpg)
+
+
 
