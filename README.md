@@ -129,7 +129,7 @@ You can find the published paper here: [Deciphering the Tissue-Specific Regulato
 
 Lets look at [igraph funtions/tools](https://igraph.org/r/html/latest/).
 
-![alt text](https://github.com/solnavss/ISCB_NetworksCoexpression/blob/main/images/poster.jpg)
+![alt text](https://github.com/solnavss/ISCB_NetworksCoexpression/blob/main/images/paper_intronless.png)
 
 # References
 
