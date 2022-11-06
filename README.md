@@ -36,7 +36,7 @@ plot(g,
 
 # We are going to use igraph functions to obtain some metrics:
 
-### Definition of the metrics can be foun in [Network Science](http://networksciencebook.com/) from Albert-László Barabási  
+Definition of the metrics can be foun in [Network Science](http://networksciencebook.com/) from Albert-László Barabási  
 
 # 1) Vertexes
 
@@ -130,113 +130,16 @@ plot(g,
 
 dev.off()
 ```
-#----------------------------------------------------------------------
 
-# Case study 
+# > Study case: intronless genes
 
+We are going to work in teams of 4 with a subsaet of intronless genes.
 
-# Descargamos la lista de aristas para la red de interacciones entre proteinas.
+![alt text](https://github.com/solnavss/ISCB_NetworksCoexpression/blob/main/images/igraph_R.png)
 
-id <- "1O5NgBBewLPHGpKDFZfNmNVu0BY-Y-dDh"
-yeast <- read.csv(sprintf("https://docs.google.com/uc?id=%s&export=download", id))
-head(yeast)
+You can find the published paper here: [Evolutionary Perspective and Expression Analysis of Intronless Genes Highlight the Conservation of Their Regulatory Role](https://pubmed.ncbi.nlm.nih.gov/34306008/).
 
-# Convertimos esta lista de aristas en una red.
+![alt text](https://github.com/solnavss/ISCB_NetworksCoexpression/blob/main/images/igraph_R.png)
 
-yeast %>%
-  graph_from_data_frame -> g
+Lets look at [igraph funtions/tools](https://igraph.org/r/html/latest/).
 
-# Primer vistazo a la red
-g
-
-# Nodos de la red.
-V(g)
-
-get.data.frame(g, what="vertices") %>% head()
-
-# Aristas de la red.
-E(g)
-
-get.data.frame(g, what="edges") %>% head()
-
-plot(g,
-     vertex.size=3,
-     vertex.color="blue",
-     vertex.label=NA,     # No queremos ver las etiquetas de los nodos.
-     edge.arrow.size=0)   # No queremos ver las puntas de las flechitas.
-
-# Usamos la función simplify() de igraph para quitar conexiones múltiples
-# y autoconexiones. Usamos la función as.unidirected() para quitar las
-# direcciones de las aristas.
-
-g <- igraph::simplify(g)
-g <- as.undirected(g)
-g
-
-# Extraemos el núcleo (core) de la red formado por los nodos que tienen
-# grado mayor a 3. 
-
-core <- coreness(g,mode="all")        # Vemos a qué core pertenecen los nodos.
-core <- core[core>3]                  # Extraemos los nodos del core 3.
-g <- induced_subgraph(g, names(core)) # Subgrafo inducido por los nodos en el vector core.
-g
-
-V(g)$degree <- degree(g)
-V(g)$betweenness <- betweenness(g)
-get.data.frame(g,what="vertices") %>% head() 
-
-# Visualizamos de modo que el tamaño de cada nodo sea proporcional a 
-# su grado.
-
-plot(g,
-     vertex.size=V(g)$degree,
-     vertex.color="blue",
-     vertex.label=NA)
-
-# Ajustamos el tamaño de los nodos.
-plot(g,
-     vertex.size=2*sqrt(V(g)$degree),
-     vertex.color="blue",
-     vertex.label=NA)
-
-# Lo mismo, pero el tamaño en función de la intermediación.
-
-plot(g,
-     vertex.size=log(V(g)$betweenness+1),
-     vertex.color="blue",
-     vertex.label=NA)
-
-# Vemos cuáles son los nodos de mayor grado y mayor intermediación.
-
-degree(g) %>% sort(decreasing=TRUE) %>% head(n=15)
-
-get.data.frame(g,what="vertices") %>%
-  as_tibble() %>%
-  arrange(-degree) %>%
-  head(n=15) %>%
-  pull(name)
-
-get.data.frame(g,what="vertices") %>%
-  as_tibble() %>%
-  arrange(-betweenness) %>%
-  head(n=15) %>%
-  pull(name)
-
-# Visualizamos de nuevo. Pero esta vez salvamos.
-
-png("network.png", width = 300*10, height = 300*8,
-    res = 300, units = "px")
-
-set.seed(25032022)
-plot(g,
-     vertex.size=2*sqrt(V(g)$degree),
-     vertex.color=V(g)$color,
-     vertex.label=NA,
-     layout=layout_nicely,
-     edge.color="gray80")            # color de las aristas
-
-dev.off()
-
-# Guardamos la red en formato graphml para su uso futuro.
-
-write.graph(g,"/Users/solouli/Desktop/yeast_protein_interaction.graphml", format="graphml")
