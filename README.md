@@ -9,7 +9,7 @@
 
 # igraph is a collection of network analysis tools.
 
-![alt text](https://github.com/solnavss/ISCB_NetworksCoexpression/blob/main/images/igraph.png)
+![alt text](https://github.com/solnavss/ISCB_NetworksCoexpression/blob/main/images/igraph_R.png)
 
 Lets look at [igraph funtions/tools](https://igraph.org/r/html/latest/).
 
