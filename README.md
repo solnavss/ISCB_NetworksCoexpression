@@ -125,7 +125,7 @@ We are going to work in teams of 4 with a subsaet of intronless genes.
 
 ![alt text](https://github.com/solnavss/ISCB_NetworksCoexpression/blob/main/images/intronless.png)
 
-You can find the published paper here: [Evolutionary Perspective and Expression Analysis of Intronless Genes Highlight the Conservation of Their Regulatory Role](https://pubmed.ncbi.nlm.nih.gov/34306008/).
+You can find the published paper here: [Deciphering the Tissue-Specific Regulatory Role of Intronless Genes Across Cancers](hhttps://link.springer.com/chapter/10.1007/978-3-031-06220-9_18).
 
 Lets look at [igraph funtions/tools](https://igraph.org/r/html/latest/).
 
