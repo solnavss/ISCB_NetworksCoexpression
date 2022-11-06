@@ -31,26 +31,26 @@ V(g)
 
 E(g)
 
-# 3) El grado de los nodos | Degree
+# 3) Degree
 
 degree(g)
 
-# 4) Matriz de distancias, caminos | Distance matrix, paths
+# 4) Distance matrix, paths
 
 distances(g)
 
-# 5) Componentes conexos | Connected components
+# 5) Connected components
 
 is_connected(g)
 count_components(g)
 components(g)
 
-# 6) Camino mas corto | Shortest path
+# 6) Shortest path
 
 all_shortest_paths(g, 1, to = 5)
 average.path.length(g, directed=FALSE, unconnected=TRUE)
 
-# 7) Diametro | Diameter
+# 7) Diameter
 
 diameter(g)
 
@@ -58,17 +58,9 @@ diameter(g)
 
 edge_density(g)
 
-# 9) Distribución de grado | Degree distribution
-
-degree_distribution(g)
-
-# 10) Centralidad,coeficiente de intermediación | Betweenness centrality
+# 9) Centralidad,coeficiente de intermediación | Betweenness centrality
 
 betweenness(g)
-
-# 11) Coeficiente de clustering | Clustering coefficient
-
-transitivity(g)
 
 ############################################################################
 # Evolutionary Perspective and Expression Analysis of Intronless Genes 

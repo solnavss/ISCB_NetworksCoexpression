@@ -89,22 +89,10 @@ diameter(g)
 edge_density(g)
 ```
 
-# 9) Degree distribution
-
-``` r
-degree_distribution(g)
-```
-
-# 10) Betweenness centrality
+# 9) Betweenness centrality
 
 ``` r
 betweenness(g)
-```
-
-# 11) Clustering coefficient
-
-``` r
-transitivity(g)
 ```
 
 # Write our network as graphml
@@ -158,10 +146,13 @@ https://github.com/elaragon/R-igraph-Network-Workshop/blob/master/NetSciX%202016
 * Data Bases
 
 https://snap.stanford.edu/data/
+
 https://networkrepository.com/
+
 https://icon.colorado.edu/#!/networks
 
 * Create a dataset
 
 https://www.genecards.org/
+
 https://string-db.org/cgi/input?sessionId=bvevnhF1MzII&input_page_show_search=on
