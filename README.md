@@ -9,7 +9,7 @@
 # igraph: igraph is a collection of network analysis tools with the emphasis on efficiency, portability and ease of use. igraph is open source and free. 
 
 
-![alt text](https://github.com/solouli/Genomica_Computacional/blob/master/practica01/ncbi_01.png)
+![alt text](https://github.com/solnavss/ISCB_NetworksCoexpression/blob/main/images/igraph.png)
 
 
 ``` r
