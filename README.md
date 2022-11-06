@@ -143,5 +143,25 @@ Lets look at [igraph funtions/tools](https://igraph.org/r/html/latest/).
 
 ![alt text](https://github.com/solnavss/ISCB_NetworksCoexpression/blob/main/images/poster.jpg)
 
+# References
 
+* Rsources
 
+https://igraph.org/r/html/latest/
+http://networksciencebook.com/chapter/1
+
+https://kateto.net/2016/05/network-datasets/
+
+https://kateto.net/wp-content/uploads/2016/01/NetSciX_2016_Workshop.pdf
+https://github.com/elaragon/R-igraph-Network-Workshop/blob/master/NetSciX%202016%20Workshop.R
+
+* Data Bases
+
+https://snap.stanford.edu/data/
+https://networkrepository.com/
+https://icon.colorado.edu/#!/networks
+
+* Create a dataset
+
+https://www.genecards.org/
+https://string-db.org/cgi/input?sessionId=bvevnhF1MzII&input_page_show_search=on
